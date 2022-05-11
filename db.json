@@ -1,0 +1,25 @@
+{
+  "users": [
+    {
+      "email": "matheus@kenzie.com",
+      "password": "$2a$10$yKzWzKoYLeWpB25hgmTskeO4J51LNr1hMRPS26D6FiDnlVet6tRDm",
+      "name": "Matheus",
+      "id": 1
+    },
+    {
+      "email": "carla@kenzie.com",
+      "password": "$2a$10$yKzWzKoYLeWpB25hgmTskeO4J51LNr1hMRPS26D6FiDnlVet6tRDm",
+      "name": "Carla",
+      "id": 2
+    }
+  ],
+  "comments": [],
+  "watched": [
+    {
+      "userId": 2,
+      "movieId": 9979,
+      "id": 2
+    }
+  ],
+  "wishWatch": []
+}
