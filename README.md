@@ -1,95 +1,77 @@
-## Endpoints
+<h1 align="center">
+📄<br>Endpoints
+</h1>
 
-#
+- Base URL : https://ja-viu-esse-filme.herokuapp.com/
 
-### Cadastro
+- Catastro:
 
-```
-- POST: /register <br/>
-  - name
-  - email
-  - password
+  - POST &rarr; /api/register
+    - name
+    - email
+    - password
 
-#
-```
+- Login
 
-### Login
+  - POST &rarr; /api/login
+    - email
+    - password
 
-```
-- POST: /login <br/>
-  - email
-  - password
+- User
 
-#
-```
+  - GET &rarr; /users/(user_id) &rarr; Retorna todos dados do usuário, incluindo coleção, lista de desejos e comentários.
 
-### User
+    - headers: { Authorization: Bearer Token }</br></br>
 
-```
+  - PATCH &rarr; /users/(user_id) &rarr; Atualizar um campo específico de um usuário
 
-- GET: api/user/(user_id) => Retorna todos dados do usuário, incluindo coleção, lista de desejos e comentários
+    - headers: { Authorization: Bearer Token }
+    - body: any single field (name, email or password)</br></br>
 
-- PATCH: api/user/(user_id) => Atualizar um campo específico de um usuário
-  - any single field (name, email or password)
+  - PUT &rarr; /users/(user_id) &rarr; Atualizar integralmente os dados de um usuário
 
-###
+    - headers: { Authorization: Bearer Token }
+    - body: {
+      name: 'new name',
+      email: 'new email',
+      password: 'new password'
+      }</br></br>
 
-- PUT: api/user/(user_id) => Atualizar integralmente os dados de um usuário
-  - name
-  - email
-  - password
+  - DELETE &rarr; /users/(user_id) &rarr; Excluir um usuário
 
-###
+    - headers: { Authorization: Bearer Token }</br></br>
 
-- DELETE: api/user/(user_id) => Excluir um usuário
+- Comments
 
-###
+  - GET &rarr; /api/comments/movie/(movieId referente à The movie DB) &rarr; Retorna todos os comentários referentes ao filme cujo id foi passado
 
-#
-```
+  - POST: /api/comments => Fazer um comentário
 
-### Comments
+    - headers { Authorization: Bearer Token }
+    - body: {
+      userId: 'id do usuário'
+      message: 'corpo do comentário'
+      movieId: (Referente à The movie DB)
+      }</br></br>
 
-```
+  - DELETE &rarr; /coments/(comment_id) => Excluir um comentário
+    - headers { Authorization: Bearer Token }</br></br>
 
-- GET: /api/comments/movie/(movieId referente à The movie DB)
+- Watched/wishWatched
 
-- POST: /api/comments => Fazer um comentário
+  - GET &rarr; /api/watched or wishWatch/(userId) &rarr; Retorna todas as mídias adicianadas à coleção ou lista de desejos
 
-  - userId
-  - message
-  - movieId (Referente à The movie DB)
+  - POST &rarr; /watched or wishWatch &rarr; Adiciona um filme à coleção ou lista de desejos
 
-###
+    - headers { Authorization: Bearer Token }
+    - body {
+      userId
+      movieId (referente à The movie Db)
+      }</br></br>
 
-- DELETE: /api/coments/(comment_id) => Excluir um comentário
+  - DELETE &rarr; /watched/(id do elemento) or /wishWatch/(id do elemento) &rarr; Remove um filme da coleção ou lista de desejos
+    - headers { Authorization: Bearer Token }</br></br>
 
-Qualquer um desses 2 endpoints pode ser usado para realizar login com um dos usuários cadastrados na lista de "Users"
+- Who watched
 
-#
-```
-
-### Watched/wishWatched
-
-```
-
-- GET: /api/watched or wishWatch/(userId) => Retorna todas as mídias adicianadas à coleção ou lista de desejos
-
-
-- POST: /api/watched or wishWatch => Adiciona um filme à coleção ou lista de desejos
-
-  - userId
-  - movieId (referente à The movie Db)
-
-
-- DELETE: /api/watched or wishWatch/(id do elemento) => Remove um filme da coleção ou lista de desejos
-
-```
-
-### Who watched
-
-```
-
-- GET: /api/who-watched/(movie_id) -> Retorna os dados dos usuários que possuem a mídia como assistida
-
-```
+  - GET &rarr; /api/who-watched/(movie_id) &rarr; Retorna os dados dos usuários que possuem a mídia como assistida
