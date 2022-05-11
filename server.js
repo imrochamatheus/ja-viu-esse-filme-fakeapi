@@ -19,9 +19,6 @@ app.use(
   jsonServer.rewriter({
     "/api/register": "/register",
     "/api/login": "/login",
-    "/api/watched*": "/600/watched$1",
-    "/api/comments*": "/644/comments$1",
-    "/api/wishWatch*": "/600/wishWatch$1",
 
     "/api/user*":
       "/600/users$1?_embed=wishWatch&_embed=watched&_embed=comments",

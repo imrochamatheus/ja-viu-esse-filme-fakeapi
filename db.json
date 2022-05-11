@@ -13,12 +13,30 @@
       "id": 2
     }
   ],
-  "comments": [],
+  "comments": [
+    {
+      "id": 1,
+      "userId": "2",
+      "message": "Muito massa",
+      "movieId": 9978
+    },
+    {
+      "id": 2,
+      "userId": "1",
+      "message": "Muito massa tbm",
+      "movieId": 9999
+    }
+  ],
   "watched": [
     {
       "userId": 2,
       "movieId": 9979,
       "id": 2
+    },
+    {
+      "userId": 1,
+      "movieId": 9999,
+      "id": 1
     }
   ],
   "wishWatch": []

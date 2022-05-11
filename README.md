@@ -2,16 +2,10 @@
 
 #
 
-## Base URL
-
-```
-  -  https://ja-viu-esse-filme.herokuapp.com
-```
-
 ### Cadastro
 
 ```
-- POST: /api/register <br/>
+- POST: /register <br/>
   - name
   - email
   - password
@@ -22,7 +16,7 @@
 ### Login
 
 ```
-- POST: /api/login <br/>
+- POST: /login <br/>
   - email
   - password
 
