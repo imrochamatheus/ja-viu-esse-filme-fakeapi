@@ -5,7 +5,7 @@
 ## Base URL
 
 ```
-  - https://ja-viu-esse-filme.herokuapp.com
+  -  https://ja-viu-esse-filme.herokuapp.com
 ```
 
 ### Cadastro
