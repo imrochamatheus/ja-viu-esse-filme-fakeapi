@@ -11,7 +11,7 @@
 ### Cadastro
 
 ```
-- POST: /register <br/>
+- POST: /api/register <br/>
   - name
   - email
   - password
@@ -22,7 +22,7 @@
 ### Login
 
 ```
-- POST: /login <br/>
+- POST: /api/login <br/>
   - email
   - password
 
